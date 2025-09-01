@@ -6,10 +6,10 @@ The system allows patients to book appointments, communicate with the clinic, an
 ---
 
  🚀 Features
-- 🔐 User Authentication** (Login, Register, Password Reset)
-- 📅 Appointment Booking System**
-- 💬 Messaging System** between patients and clinic
-- 📊 Admin Dashboard** with full control
+- 🔐 User Authentication (Login, Register, Password Reset)
+- 📅 Appointment Booking System
+- 💬 Messaging System between patients and clinic
+- 📊 Admin Dashboard with full control
 - 👩‍⚕️ Manage doctors, patients, and appointments
 - 📧 Email notifications
 - 🗂️ Database migrations & seeders
