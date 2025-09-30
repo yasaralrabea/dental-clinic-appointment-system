@@ -1,0 +1,119 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* العنوان */
+.title {
+    font-size: 50px;
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+/* فورم إضافة المقالة */
+form {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form-input {
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.submit-btn:hover {
+    background-color: #004d99;
+}
+
+/* بطاقات المقالات */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-tittle {
+    font-size: 30px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.service-disc {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* نص لا توجد مقالات */
+.no-services {
+    font-size: 18px;
+    color: #999;
+    margin-top: 20px;
+}
+
+/* تنسيق زر الحذف */
+.delete-form {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}

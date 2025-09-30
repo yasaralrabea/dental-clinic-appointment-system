@@ -1,0 +1,84 @@
+/* تنسيق النص والخلفية */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* عنوان الصفحة */
+h1 {
+    color: #007bff;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* جدول المواعيد */
+.appointments-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.appointments-table th, .appointments-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.appointments-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* تنسيق زر إلغاء */
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* تنسيق زر تم الموعد */
+.completed-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.completed-button:hover {
+    background-color: #218838;
+}
+
+/* تنسيق الرسالة الناجحة مع الأيقونة */
+.alert-success {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.alert-success i {
+    margin-right: 10px;
+    font-size: 18px;
+}

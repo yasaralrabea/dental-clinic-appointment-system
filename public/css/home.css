@@ -1,0 +1,264 @@
+/* ===========================
+   إعدادات عامة
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: #f9fbfc;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    direction: rtl; /* لتكون القائمة على اليمين */
+}
+
+/* ===========================
+   Sidebar
+=========================== */
+.sidebar {
+    width: 220px;
+    background: linear-gradient(180deg, #0072ff, #00c6ff);
+    color: #fff;
+    min-height: 100vh;
+    padding: 30px 15px;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    right: 0; /* القائمة على اليمين */
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    width: 0; /* مخفية بالكامل عند الطوي */
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed h2 {
+    opacity: 0;
+}
+
+.sidebar .button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.15);
+    margin: 12px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sidebar .button i {
+    font-size: 16px;
+    min-width: 24px;
+    text-align: center;
+}
+
+.sidebar.collapsed .button span {
+    display: none;
+}
+
+.sidebar .button:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateX(-5px);
+}
+
+/* ===========================
+   Container
+=========================== */
+.container {
+    margin-right: 240px; /* يتناسب مع موقع القائمة على اليمين */
+    width: calc(100% - 240px);
+    padding: 20px;
+    transition: margin-right 0.3s ease, width 0.3s ease;
+    flex: 1; /* ليشغل المساحة المتبقية */
+}
+
+.sidebar.collapsed ~ .container {
+    margin-right: 0; /* عند إخفاء القائمة */
+    width: 100%;
+}
+
+/* ===========================
+   Header
+=========================== */
+.header {
+    background: #ffffffcc;
+    backdrop-filter: blur(8px);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 500;
+}
+
+.header h1 {
+    color: #0088cc;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    flex: 1;
+}
+
+/* زر القائمة */
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #0072ff;
+    margin-right: 10px;
+}
+
+/* ===========================
+   أزرار الدخول والخروج
+=========================== */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* مسافة بين الأزرار */
+}
+
+.login-btn,
+.logout-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #0099cc, #0059b3);
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    background: linear-gradient(135deg, #ff4e50, #cc0000);
+    color: #fff;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(135deg, #cc0000, #990000);
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    margin-right: 5px;
+}
+
+/* ===========================
+   أيقونة الحساب في الهيدر
+=========================== */
+.account-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.account-btn:hover {
+    background: linear-gradient(135deg, #0099cc, #0059b3);
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* ===========================
+   الأزرار الرئيسية في الصفحة
+=========================== */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.main-btn {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    padding: 25px 40px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-btn:hover {
+    background: linear-gradient(135deg, #0099cc, #0059b3);
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* ===========================
+   محتوى إضافي - عن عيادتنا
+=========================== */
+.clinic-bio {
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 120px 0 40px 0; /* نزلها أكثر للأسفل */
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+    color: #666666; /* خط خافت */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ===========================
+   Footer
+=========================== */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 30px 20px;
+    background: #f5faff;
+    border-top: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    gap: 20px;
+}

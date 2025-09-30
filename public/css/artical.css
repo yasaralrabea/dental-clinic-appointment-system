@@ -1,0 +1,77 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* العنوان */
+.title {
+    font-size: 50px;
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+/* بطاقات الخدمات */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-title {
+    font-size: 50px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    font-size: 30px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.service-price {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* نص لا توجد خدمات */
+.no-services {
+    font-size: 18px;
+    color: #999;
+    margin-top: 20px;
+}
