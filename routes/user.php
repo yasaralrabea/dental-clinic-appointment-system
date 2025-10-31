@@ -20,7 +20,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/new_appointment', [AppointmentController::class, 'store']);
     Route::get('/get-times-for-date', [AppointmentController::class, 'avillable_time'])->name('getTimesForDate');
     Route::get('/my_appointments', [AppointmentController::class, 'my_apps']);
-    Route::post('destroy', [AppointmentController::class, 'destroy'])->name('apps.destroy');
 
     Route::get('/send', [questionController::class, 'send']);
     Route::get('/my_q', [questionController::class, 'my_q']);

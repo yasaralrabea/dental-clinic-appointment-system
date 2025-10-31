@@ -12,6 +12,7 @@ Route::get('/doctors', [AdminController::class, 'show_doctors'])->name('doctor.c
 Route::get('/serves', [ServeController::class, 'serves']);
 Route::get('/articals', [ArticalController::class, 'show']);
 Route::get('/rates', [RateController::class, 'rates']);
+ Route::delete('/appointment_delete/{id}', [AdminController::class, 'destroy_a'])->name('apps.destroy');
 
 Route::get('/', function () {
     return view('home'); 
